@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    background: #FFFFFF;
+}
+.header {
+    background: url("../images/main_background.png");
+    height: fit-content;
+    background-size: cover;
+    width: 100%;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__logo {
+    height: 26px;
+    font: normal 400 26px/26px 'Lora';
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.navigation_header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: 21%;
+    justify-content: space-between;
+}
+
+.navigation__text {
+    height: 20px;
+    font: normal 400 12px/20px 'Oxygen';
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding:  15px 23px 5px 23px;
+    border-radius: 3px;
+    background: transparent;
+}
+.navigation__text:hover {
+    background: rgba(250, 93, 2, 0.493);
+    padding:  10px 23px 10px 23px;
+}
+
+.header__context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__context-title {
+    font: normal 400 50px/51px 'Lora';
+    color: #FFFFFF;
+    margin-top: 108px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.header__context-description {
+    font: normal 400 17px/20px 'Oxygen';
+    margin-bottom: 31px;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.button{
+    margin-bottom: 157px;
+}
+
+
+.section_nav {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: center;
+	
+}
+
+.section_nav__link {
+    text-align: center;
+    font: normal 400 14px/20px 'Lora';
+    text-decoration: none;
+    color: #768088;
+    padding: 22px 49px 23px 49px;
+    border: 2px solid #FFFFFF;
+}
+  
+.section_nav-link:hover {
+    border: 2px solid #768088;
+}
+
+
+.section_unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__title {
+    font: normal 400 20px/27px 'Oxygen';
+    letter-spacing: 2px;
+    color: #2E2E2E;
+    padding:  0px 16px 16px 16px;
+    border-bottom: 1px solid #DEDEDE
+}
+
+.section_unit__background{
+    height: fit-content;
+    background: #F7F7F7;
+    border-radius: 0px;
+}
+
+.teg_text {
+    font: normal 400 12px/13px 'Oxygen';
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 6px;
+}
+
+.tag {
+    width: 20%;
+    height: 8%;
+    border-radius: 2px;
+    margin: 20px;
+}
+
+.tag-adventure {
+    background: #DD783F;
+}
+
+.tag-none {
+    opacity: 0;
+}
+
+.section_cards {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+	margin-bottom: 20px;
+	
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 23px;
+	justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card {
+    width: 440px;
+    height: 280px;
+	margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    margin-top: 110px;
+}
+
+.card-title {
+    text-decoration: none;
+    font: normal 400 27px/30px 'Lora';
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 7px;
+    margin-left: 20px; 
+    border-bottom: 2px solid transparent; 
+}
+.card-title:hover {
+    border-bottom: 2px solid #a09f9f;
+}
+
+.card-description {
+    font: normal 400 14px/25px 'Oxygen';
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    margin-left: 20px;
+    margin-bottom: 12px;
+    height: 25px;
+    overflow: auto;
+}
+.card-context {
+    font: normal 400 12px/35px 'Oxygen';
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 20px;
+    flex-basis: 45%;
+    margin-bottom: 12px;
+    
+    display: inline-flex;
+    align-items: center;
+}
+.avatar {
+    border-radius: 60px;
+	height: 26px;
+	width: 26px;
+}
+.card-data {
+    font: normal 400 12px/35px 'Oxygen';
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    flex-basis: 45%;
+    margin-bottom: 12px;
+    justify-content: flex-end;
+}
+
+
+.section-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 68px;
+    margin-bottom: 100px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 940px;
+    margin-top: 10px;
+}
+.box {
+    background: #FFFFFF;
+    width: 296px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    margin-bottom: 25px;
+    width: 442px;
+    height: 291px;
+
+}
+
+.box-images {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.box-information {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box-text{
+    padding: 14px 13px 12px 13px;
+}
+.box-title {
+	text-decoration: none;
+    font: normal 400 16px/19px 'Lora';
+    color: #101315;
+}
+
+.box-title:hover {
+    border-bottom: 1px solid #000000;
+}
+
+/* sans-serif / serif  */
+.box-description {
+    font: normal 400 13px/19px 'Oxygen';
+    color: #7A7A7A;
+    height: 38px;
+    overflow: auto;
+    margin-top: 7px;
+}
+
+.box-footer {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: space-evenly;
+    height: 30px;
+    background: #FCFCFC;
+    border-radius: 0px;
+    border-top: 1px solid #EFEFEF;
+ 
+
+}
+.box-context {
+    font: normal 400 11px/35px 'Oxygen';
+    color: #999999;
+    flex-basis: 45%;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+}
+.box-data {
+    font: normal 400 11px/35px 'Oxygen';
+    color: #999999;
+    display: flex;
+    align-items: center;
+    flex-basis: 40%;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.section-second-text {
+    font: normal 400 24px/35px 'Oxygen';
+    color: #101315;
+}
+
+.context_author {
+    margin-left: 10px;
+}
+
+.nav-text {
+    font: normal 400 11px/26px 'Oxygen';
+    text-decoration: none;
+    text-align: right;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+    border-bottom: 2px solid transparent; 
+}
+
+.nav-text:hover {
+    border-bottom: 2px solid #a9a7a7;;
+}
+.button {
+    padding: 12px 30px;
+    background: #DD783F;
+    border-radius: 3px;
+    border-style: none;
+    
+    font: normal 500 13px/20px 'Oxygen';
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    background: #f89456;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+	background: url("../images/footer.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.footer__bottom{
+    width: 100%;
+    background: rgba(35, 47, 56, 0.6);
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    height: 170px;
+    width: 100%;
+    max-width: 960px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+}
+
+
+.footer__logo {
+    height: 26px;
+    margin-top: 3px;
+    font: normal 400 26px/26px 'Lora';
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+.navigation_footer {
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.navigation__item_footer {
+    height: 26px;
+    margin-top: 3px;
+    font: normal 400 11px/26px 'Oxygen';
+    text-align: right;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 289px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.12);
+}
+
+.subscription-form__label {
+    width: 188px;
+    height: 44px;
+    margin-top: 82px;
+    font: normal 400 25px/30px 'Oxygen';
+    color: #EFEFEF;
+    text-align: center;
+    border-bottom: solid 1px #DEDEDE;
+}
+
+.subscription-form__input-section {
+    display: flex;
+    justify-content: space-around;
+    max-width: 540px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.subscription-form__input-field {
+    width: 75%;
+    height: 50px;
+    border-radius: 3px 0px 0px 3px;
+    font: normal 400 12px/14.06px 'Roboto';
+    color: #817F83;
+    background: #FFFFFF;
+    text-align: left;
+    border: none;
+    padding-left: 35px;
+}
+
+.subscription-form__input-field:focus {
+    outline: none;
+}
+
+.subscription-form__submit-button {
+    width: 25%;
+    height: 50px;
+    padding-top: 18px;
+    border-radius: 0px 3px 3px 0px;
+    font: normal 400 12px/14.06px 'Roboto';
+    color: #F8F8F8;
+    background-color: rgba(255, 255, 255, 0.28);
+    text-align: center;
+}
+
+.subscription-form__submit-button:hover {
+    background-color: rgba(200, 200, 220, 0.55);
+}
+
+.subscription-form__submit-button:active {
+    background-color: rgba(150, 150, 160, 0.55);
+}
+
+.navigation__item{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation{
+    display: flex;
+    height: 40px;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 480px){
+    .footer__menu{
+        height: 89px;
+    }
+    .navigation_footer {
+        flex-direction: row;
+    }
+    
+}
+
+@media screen and (min-width: 420px){
+    .section-nav-link {
+        padding: 22px 10px 22px 10px;
+        max-width: 80px;
+        justify-content: center;
+    }
+    .tag {
+        width: 25%;
+    }
+    .header-context_title {
+        text-align: center;
+    }
+    
+    .boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-context_description {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width :770px) {
+    .section-nav-link {
+        padding: 22px 5px 22px 5px;
+        min-width: 99px;
+        justify-content: center;
+    }
+    .card {
+        max-width: 460px;
+        width: calc(50% - 15px);
+        margin: 7.5px;
+    }
+    .cards{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .box {
+        width: calc(32% - 7.5px);
+        margin: 7.5px;
+    }
+    .boxes{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+
+}

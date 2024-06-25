@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/admin.css">
+    <script defer type="text/javascript" src="scripts/admin.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__content">
+            <img src="images/logo-admin-white.svg" class="header__logo" alt="logo">
+            <div class="header__avatar_wrapper">
+                <div class="avatar"><span class="avatar__letter">N</span></div>
+                <img src="images/icon-out-login.svg" class="log-out-icon" alt="log-out-icon">
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+            <div class="content__header">
+                <div class="content__header_text">
+                    <h1 class="new-post-text">New Post</h1>
+                    <p class="new-post-description-text">Fill out the form bellow and publish your article</p>
+                </div>
+                <button type="button" class="publish-button" onclick="ValidateForm()">Publish</button>
+            </div>
+    
+        <div id="error" class="error-block">
+            <img class="error-block_image" src="images/icon-alert-error.svg">
+            <p class="error-block_text">Whoops! Some fields need your attention :o</p>
+        </div>
+
+        <div id="succes" class="success-block">
+            <img class="error-block_image" src="images/icon-allert-succes.svg">
+            <p class="error-block_text">Publish Complete!</p>
+        </div>
+
+        <div class="main-information-block">
+            <h2 class="header2">Main Information</h2>
+            <div class="main-blocks__wrapper">
+                <form id="main-form" class="form">
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="title">Title</label>
+                        <input class="form__input-field_input" type="text" name="title" id="title" placeholder="New Post" value="">
+                        <h3 id="title-error" class="form__input-field_label-bottom-error">Title is required.</h3>
+                    </div>
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="description">Short description</label>
+                        <input class="form__input-field_input" type="text" name="subtitle" id="description" placeholder="Please, enter any description" value="">
+                        <h3 id="description-error" class="form__input-field_label-bottom-error">Description is required.</h3>
+                    </div>
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="author-name">Author Name</label>
+                        <input class="form__input-field_input" type="text" name="author" id="author-name" placeholder=" ">
+                        <h3 id="author-name-error" class="form__input-field_label-bottom-error">Author name is required.</h3>
+                    </div>
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="author-photo">Author Photo</label>
+                        <div class="form__input-field_author-wrapper">
+
+                            <div id="author-photo-main" class="form__input-field_photo">
+                                <img id="author-to-delete" src="images/icon-camera.svg">
+                            </div>
+
+                            <input class="form__input_file-input" type="file" id="author-photo" name="author-photo" accept=".jpeg, .png, .gif" value="">
+                            <label id="upload-to-delete" class="form__input-field_file-label" for="author-photo">Upload</label>
+                            <div id="delete-photo" class="input-field__delete-block_camera">
+
+                                <label class="delete-block_new-label" for="author-photo">
+                                    <div class="new-label_camera"></div>
+                                    Upload New                                
+                                </label>
+
+                                <label id="delete-author" class="delete-block_clear-label" onclick="RemoveAuthorImage()">
+                                    <div class="new-label_trash-can"></div> 
+                                    Remove                             
+                                </label>
+
+                            </div>
+                        </div>
+                        <h3 id="author-photo-error" class="form__input-field_label-bottom-error">Author photo is required.</h3>
+                    </div>
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="post-date">Publish Date</label>
+                        <input class="form__input-field_input" type="date" name="publish_date" id="post-date" placeholder="mm/dd/yyyy">
+                        <h3 id="post-date-error" class="form__input-field_label-bottom-error">Post date is required.</h3>
+                    </div>
+
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="big-image">Hero Image</label>
+                            <div id="big-photo-main" class="form__input-field_big-photo" value="">
+                                <input class="form__input_file-input" type="file" id="big-image" name="big-image" accept=".jpeg, .png, .gif">
+                                <label class="form__input-field_file-label" for="big-image" id="big-image-label">
+
+                                    <div class="form__input-field_preview-photo">
+                                        <img src="images/icon-camera.svg">
+                                    </div>
+
+                                    Upload
+                                </label>
+                            </div>
+                            <h3 id="big-photo-desc" class="form__input-field_label-bottom">Size up to 10mb. Format: png, jpeg, gif.</h3>
+                            <div id="delete-big-photo" class="input-field__delete-block">
+
+                                <label class="delete-block_new-label" for="big-image">
+                                    <div class="new-label_camera"></div>
+                                    Upload New
+                                </label>
+
+                                <label id="delete-big" class="delete-block_clear-label" onclick="RemoveArticlePhoto()">
+                                    <div class="new-label_trash-can"></div>
+                                    Remove
+                                </label>
+
+                            </div>
+                            <h3 id="big-image-error" class="form__input-field_label-bottom-error">Article image is required.</h3>        
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__input-field_label" for="small-image">Hero Image</label>
+                        <div id="small-photo-main" class="form__input-field_small-photo">
+                            <input class="form__input_file-input" type="file" id="small-image" name="small-image" accept=".jpeg, .png, .gif">
+                            <label class="form__input-field_file-label" for="small-image" id="small-image-label">
+
+                                <div class="form__input-field_preview-photo">
+                                    <img src="images/icon-camera.svg">
+                                </div>
+
+                                Upload
+                            </label>
+                        </div>
+                        <h3 id="small-photo-desc" class="form__input-field_label-bottom" value="">Size up to 5mb. Format: png, jpeg, gif.</h3>
+                        <div id="delete-small-photo" class="input-field__delete-block">
+
+                            <label class="delete-block_new-label" for="small-image">
+                                <div class="new-label_camera"></div>
+                                Upload New
+                            </label>
+                            <label id="delete-small" class="delete-block_clear-label" onclick="RemovePostCardPhoto()">
+                                <div class="new-label_trash-can"></div>
+                                Remove
+                            </label>
+                            
+                        </div>
+                        <h3 id="small-image-error" class="form__input-field_label-bottom-error">Post card image is required.</h3>
+                    </div>
+                </form>
+                <div class="preview">
+                    <h3 class="form__input-field_label">Article Preview</h3>
+                    <div class="preview__article">
+                        <div class="preview__article_left-shadow"></div>
+                        <div class="preview__article_bottom-shadow"></div>
+                        <div class="preview__article_content">
+
+                            <div class="dots-wrapper">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+
+                            <div class="article__content_header">
+                                <h2 class="article__content_header_h2" id="article-title-copy">New Post</h2>
+                                <h3 class="article__content_header_subtitle" id="article-subtitle-copy">Please, enter any description</h3>
+                            </div>
+
+                            <div class="preview__article_image" id="preview-big"></div>
+                        </div>
+                    </div>
+                    <h3 class="form__input-field_label">Post card preview</h3>
+                    <div class="preview__card">
+                        <div class="preview__article_left-shadow"></div>
+                        <div class="preview__post-card_bottom-shadow"></div>
+                        <div class="post-card">
+
+                            <div id="post-card-preview" class="post-card__image"></div>
+
+                            <div class="post-card__text">
+                                <h3 class="post-card__text_title" id="post-card-title-copy">New Post</h3>
+                                <h4 class="post-card__text_subtitle" id="post-card-subtitle-copy">Please, enter any description</h4>
+                            </div>
+
+                            <div class="post-card__info">
+                                <div class="post-card__info_image" id="author-preview-photo"></div>
+                                <span class="post-card__info_author-name" id="author-name-copy">Enter author name</span>
+                                <span class="post-card__info_date" id="post-card-date-copy">22/04/2024</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-information-block">
+            <h2 class="header2">Content</h2>
+            <form id="content-form">
+                <label class="label-text" for="post-content">Post content (plain text)</label>
+                <textarea class="content__textarea" id="post-content" name="content" cols="110" rows="6" placeholder="Type anything you want..."></textarea>
+            </form>
+        </div>
+    </div>
+</body>
+<footer></footer>
+</html>
